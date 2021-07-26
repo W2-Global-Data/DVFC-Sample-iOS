@@ -7,7 +7,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 pre_install do |installer|
 	installer.analysis_result.specifications.each do |s|
         if s.name == 'Alamofire'
-            s.swift_version = '5.3'
+            s.swift_version = '5.4'
         end
     end
 end
@@ -34,7 +34,7 @@ end
         end
       end
       target.build_configurations.each do |config|
-      config.build_settings['SWIFT_VERSION'] = '5.3'
+      config.build_settings['SWIFT_VERSION'] = '5.4'
     end
   end
 end

@@ -10,8 +10,9 @@ import W2DocumentVerificationClient
 import W2FacialComparisonClient
 import W2FacialComparisonClientCapture
 
-let licenseKey = "YOUR LICENSE KEY HERE"
-let clientRef = "client-reference"
+let licenseKey = "Your-License-Key"
+let clientRef = "client-reference-ios"
+let apiKey = "Your-Api-Key"
 class ViewController: UIViewController {
 
     @IBOutlet weak var faceImageView: UIImageView!
@@ -51,6 +52,97 @@ class ViewController: UIViewController {
             }
         } catch {
             handle(error: error)
+        }
+    }
+    
+    @IBAction func documentVerifyUsingRestEndpoint(_ sender: Any) {
+        guard let image = docImageView.image else {
+            alert(message: "Capture a document before verifying")
+            return
+        }
+        
+        message.text = "Loading..."
+        do {
+            let url = URL(string: "https://api.w2globaldata.com/document-verification/verify")
+            
+            let boundary = UUID().uuidString
+            
+            let utf8ApiKey = apiKey.data(using: .utf8)
+            let base64encodedApiKey = utf8ApiKey?.base64EncodedString(options: Data.Base64EncodingOptions(rawValue: 0))
+            
+            var urlRequest = URLRequest(url: url!)
+            
+            urlRequest.httpMethod = "POST"
+            urlRequest.addValue("Basic " + base64encodedApiKey!, forHTTPHeaderField: "Authorization")
+            urlRequest.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+            
+            
+            
+            var data = Data()
+            
+            let pagesParam = "Pages"
+            let fileName = "image.jpg"
+            let mimeType = "image/jpg"
+            let documentTypeParam = "DocumentType"
+            let documentTypeValue = "ID3"
+            let clientReferenceParam = "ClientReference"
+            
+            
+            data.append("\r\n--\(boundary)\r\n".data(using: .utf8)!)
+            data.append("Content-Disposition: form-data; name=\"\(documentTypeParam)\"\r\n\r\n".data(using: .utf8)!)
+            data.append("\(documentTypeValue)\r\n".data(using: .utf8)!)
+            
+            
+            data.append("\r\n--\(boundary)\r\n".data(using: .utf8)!)
+            data.append("Content-Disposition: form-data; name=\"\(clientReferenceParam)\"\r\n\r\n".data(using: .utf8)!)
+            data.append("\(clientRef)\r\n".data(using: .utf8)!)
+            
+            
+            
+            data.append("--\(boundary)\r\n".data(using: .utf8)!)
+            data.append("Content-Disposition: form-data; name=\"\(pagesParam)\"; filename=\"\(fileName)\"\r\n".data(using: .utf8)!)
+            data.append("Content-Type: \(mimeType)\r\n\r\n".data(using: .utf8)!)
+            data.append(image.jpegData(compressionQuality: 1.0)!)
+
+            
+            data.append("\r\n".data(using: .utf8)!)
+            
+            
+            data.append("--\(boundary)--\r\n".data(using: .utf8)!)
+            
+            urlRequest.addValue("\(data.count)", forHTTPHeaderField: "Content-Length")
+            
+            
+            urlRequest.httpBody = data
+            
+            urlRequest.timeoutInterval = 120.0
+            
+            
+            let session = URLSession.shared
+            session.dataTask(with: urlRequest) { (data, response, error) in
+                if let response = response {
+                    let urlResponseHttp = response as! HTTPURLResponse
+                    DispatchQueue.main.async {
+                        if (200...299).contains(urlResponseHttp.statusCode){
+                            self.message.text = "Success - Rest Endpoint!"
+                        }
+                    }
+                    print(response)
+                }
+                
+                if let data = data {
+                    do {
+                        let json = try JSONSerialization.jsonObject(with: data, options: [])
+                        print(json)
+                    } catch {
+                        DispatchQueue.main.async {
+                            self.message.text = "Somethign went wrong: \(error.localizedDescription)"
+                        }
+                        print(error)
+                    }
+                }
+            }.resume()
+            
         }
     }
     

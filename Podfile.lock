@@ -1,0 +1,45 @@
+PODS:
+  - AcuantiOSSDKV11/AcuantCommon (11.5.1)
+  - AcuantiOSSDKV11/AcuantDocumentProcessing (11.5.1):
+    - AcuantiOSSDKV11/AcuantCommon
+  - AcuantiOSSDKV11/AcuantFaceMatch (11.5.1):
+    - AcuantiOSSDKV11/AcuantCommon
+  - AcuantiOSSDKV11/AcuantHGLiveness (11.5.1):
+    - AcuantiOSSDKV11/AcuantCommon
+  - AcuantiOSSDKV11/AcuantImagePreparation (11.5.1):
+    - AcuantiOSSDKV11/AcuantCommon
+  - W2SDK/W2DocumentVerificationClient (1.9.0):
+    - W2SDKCore (= 1.9.0)
+  - W2SDK/W2DocumentVerificationClientCapture (1.9.0):
+    - W2SDKCore (= 1.9.0)
+  - W2SDK/W2FacialComparisonClient (1.9.0):
+    - W2SDKCore (= 1.9.0)
+  - W2SDK/W2FacialComparisonClientCapture (1.9.0):
+    - W2SDKCore (= 1.9.0)
+  - W2SDKCore (1.9.0):
+    - AcuantiOSSDKV11/AcuantDocumentProcessing (= 11.5.1)
+    - AcuantiOSSDKV11/AcuantFaceMatch (= 11.5.1)
+    - AcuantiOSSDKV11/AcuantHGLiveness (= 11.5.1)
+    - AcuantiOSSDKV11/AcuantImagePreparation (= 11.5.1)
+
+DEPENDENCIES:
+  - W2SDK/W2DocumentVerificationClient (= 1.9.0)
+  - W2SDK/W2DocumentVerificationClientCapture (= 1.9.0)
+  - W2SDK/W2FacialComparisonClient (= 1.9.0)
+  - W2SDK/W2FacialComparisonClientCapture (= 1.9.0)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AcuantiOSSDKV11
+  https://github.com/W2-Global-Data/cocoapods-podspecs.git:
+    - W2SDK
+    - W2SDKCore
+
+SPEC CHECKSUMS:
+  AcuantiOSSDKV11: e7d9b96346929d2a9566d3a50dd781a93a31bc8f
+  W2SDK: 41bf8ccf5e5c7351fbf113071218ec8c3f16a828
+  W2SDKCore: 3605da5e6e0e6186391a41222fcbdef5d78568ba
+
+PODFILE CHECKSUM: fb8922b9ee67897a05de4a21812c45da4cc41cdf
+
+COCOAPODS: 1.10.1
