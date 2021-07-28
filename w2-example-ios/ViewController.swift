@@ -63,7 +63,7 @@ class ViewController: UIViewController {
         
         message.text = "Loading..."
         do {
-            let url = URL(string: "https://api.w2globaldata.com/document-verification/verify")
+            let url = URL(string: "https://api.w2globaldata.com/document-verification/verify?api-version=1.5")
             
             let boundary = UUID().uuidString
             
