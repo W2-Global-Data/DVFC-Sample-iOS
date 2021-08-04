@@ -1,0 +1,31 @@
+/* 
+  Localizable.strings
+  w2-example-ios
+
+  Created by W2-Dawid on 04/08/2021.
+*/
+
+
+/*
+ Facial Comparison Capture View
+ */
+"facialcomparison.capture.face.too.close" = "Za blisko! Oddal się";
+"facialcomparison.capture.face.too.far" = "Przybliż się";
+"facialcomparison.capture.face.not.in.frame" = "Wejdź w rame";
+"facialcomparison.capture.face.good.distanc.blink" = "Mrugnij!";
+"facialcomparison.capture.face.hold.steady" = "Trzymaj stabilnie";
+
+"facialcomparison.capture.info1" = "Wyrównaj twarz i mrugnij, kiedy pojawi się ";
+"facialcomparison.capture.green.oval" = "zielona elipsa";
+"facialcomparison.capture.info2" = "";
+
+
+/*
+ Document Verification Capture View
+ */
+"documentverification.capture.hold.steady" = "Trzymaj stabilnie";
+"documentverification.capture.align" = "Wyrównaj";
+"documentverification.capture.move.closer" = "Przybliż kamere";
+"documentverification.capture.capturing" = "Capturing";
+
+
