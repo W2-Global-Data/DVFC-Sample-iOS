@@ -7,7 +7,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 pre_install do |installer|
 	installer.analysis_result.specifications.each do |s|
         if s.name == 'Alamofire'
-            s.swift_version = '5.4'
+            s.swift_version = '5.5'
         end
     end
 end
@@ -17,7 +17,7 @@ target 'w2-example-ios' do
   use_frameworks!
 
   # Pods for w2-example-ios
-  w2sdk_version = "1.9.0"
+  w2sdk_version = "1.9.1"
   puts "Using version #@w2sdk_version of W2SDK from the feeds"
   pod 'W2SDK/W2DocumentVerificationClient', w2sdk_version
   pod 'W2SDK/W2DocumentVerificationClientCapture', w2sdk_version
@@ -34,7 +34,7 @@ end
         end
       end
       target.build_configurations.each do |config|
-      config.build_settings['SWIFT_VERSION'] = '5.4'
+      config.build_settings['SWIFT_VERSION'] = '5.5'
     end
   end
 end
