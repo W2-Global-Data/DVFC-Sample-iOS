@@ -1,32 +1,32 @@
 PODS:
-  - AcuantiOSSDKV11/AcuantCommon (11.5.1)
-  - AcuantiOSSDKV11/AcuantDocumentProcessing (11.5.1):
+  - AcuantiOSSDKV11/AcuantCommon (11.5.4)
+  - AcuantiOSSDKV11/AcuantDocumentProcessing (11.5.4):
     - AcuantiOSSDKV11/AcuantCommon
-  - AcuantiOSSDKV11/AcuantFaceMatch (11.5.1):
+  - AcuantiOSSDKV11/AcuantFaceMatch (11.5.4):
     - AcuantiOSSDKV11/AcuantCommon
-  - AcuantiOSSDKV11/AcuantHGLiveness (11.5.1):
+  - AcuantiOSSDKV11/AcuantHGLiveness (11.5.4):
     - AcuantiOSSDKV11/AcuantCommon
-  - AcuantiOSSDKV11/AcuantImagePreparation (11.5.1):
+  - AcuantiOSSDKV11/AcuantImagePreparation (11.5.4):
     - AcuantiOSSDKV11/AcuantCommon
-  - W2SDK/W2DocumentVerificationClient (1.9.0):
-    - W2SDKCore (= 1.9.0)
-  - W2SDK/W2DocumentVerificationClientCapture (1.9.0):
-    - W2SDKCore (= 1.9.0)
-  - W2SDK/W2FacialComparisonClient (1.9.0):
-    - W2SDKCore (= 1.9.0)
-  - W2SDK/W2FacialComparisonClientCapture (1.9.0):
-    - W2SDKCore (= 1.9.0)
-  - W2SDKCore (1.9.0):
-    - AcuantiOSSDKV11/AcuantDocumentProcessing (= 11.5.1)
-    - AcuantiOSSDKV11/AcuantFaceMatch (= 11.5.1)
-    - AcuantiOSSDKV11/AcuantHGLiveness (= 11.5.1)
-    - AcuantiOSSDKV11/AcuantImagePreparation (= 11.5.1)
+  - W2SDK/W2DocumentVerificationClient (1.9.1):
+    - W2SDKCore (= 1.9.1)
+  - W2SDK/W2DocumentVerificationClientCapture (1.9.1):
+    - W2SDKCore (= 1.9.1)
+  - W2SDK/W2FacialComparisonClient (1.9.1):
+    - W2SDKCore (= 1.9.1)
+  - W2SDK/W2FacialComparisonClientCapture (1.9.1):
+    - W2SDKCore (= 1.9.1)
+  - W2SDKCore (1.9.1):
+    - AcuantiOSSDKV11/AcuantDocumentProcessing (= 11.5.4)
+    - AcuantiOSSDKV11/AcuantFaceMatch (= 11.5.4)
+    - AcuantiOSSDKV11/AcuantHGLiveness (= 11.5.4)
+    - AcuantiOSSDKV11/AcuantImagePreparation (= 11.5.4)
 
 DEPENDENCIES:
-  - W2SDK/W2DocumentVerificationClient (= 1.9.0)
-  - W2SDK/W2DocumentVerificationClientCapture (= 1.9.0)
-  - W2SDK/W2FacialComparisonClient (= 1.9.0)
-  - W2SDK/W2FacialComparisonClientCapture (= 1.9.0)
+  - W2SDK/W2DocumentVerificationClient (= 1.9.1)
+  - W2SDK/W2DocumentVerificationClientCapture (= 1.9.1)
+  - W2SDK/W2FacialComparisonClient (= 1.9.1)
+  - W2SDK/W2FacialComparisonClientCapture (= 1.9.1)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -36,10 +36,10 @@ SPEC REPOS:
     - W2SDKCore
 
 SPEC CHECKSUMS:
-  AcuantiOSSDKV11: e7d9b96346929d2a9566d3a50dd781a93a31bc8f
-  W2SDK: 41bf8ccf5e5c7351fbf113071218ec8c3f16a828
-  W2SDKCore: 3605da5e6e0e6186391a41222fcbdef5d78568ba
+  AcuantiOSSDKV11: e88f7b2d8ee5c952790ddcef62891abe14a05333
+  W2SDK: 8aef372f51f7c09e1d4534661a68842ac866a7cd
+  W2SDKCore: 7a11c1f17c8c817366a621a7acc560ae0d39604a
 
-PODFILE CHECKSUM: fb8922b9ee67897a05de4a21812c45da4cc41cdf
+PODFILE CHECKSUM: 04e7550048ad84cbb9bf26e93dfe6d06ef62717a
 
 COCOAPODS: 1.10.1

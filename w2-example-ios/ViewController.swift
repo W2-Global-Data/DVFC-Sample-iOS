@@ -1,7 +1,7 @@
 //
 //  ViewController.swift
 //  w2-example-ios
-//  Copyright © 2020 W2 Global Data. All rights reserved.
+//  Copyright © 2021 W2 Global Data. All rights reserved.
 //
 
 import UIKit
@@ -136,7 +136,7 @@ class ViewController: UIViewController {
                         print(json)
                     } catch {
                         DispatchQueue.main.async {
-                            self.message.text = "Somethign went wrong: \(error.localizedDescription)"
+                            self.message.text = "Something went wrong: \(error.localizedDescription)"
                         }
                         print(error)
                     }
