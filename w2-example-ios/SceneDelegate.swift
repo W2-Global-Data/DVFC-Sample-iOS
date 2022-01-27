@@ -1,7 +1,7 @@
 //
 //  SceneDelegate.swift
 //  w2-example-ios
-//  Copyright © 2020 W2 Global Data. All rights reserved.
+//  Copyright © 2021 W2 Global Data. All rights reserved.
 //
 
 import UIKit
