@@ -17,7 +17,7 @@ target 'w2-example-ios' do
   use_frameworks!
 
   # Pods for w2-example-ios
-  w2sdk_version = "1.9.1"
+  w2sdk_version = "2.0.0"
   puts "Using version #@w2sdk_version of W2SDK from the feeds"
   pod 'W2SDK/W2DocumentVerificationClient', w2sdk_version
   pod 'W2SDK/W2DocumentVerificationClientCapture', w2sdk_version

@@ -55,6 +55,31 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func documentClassifyAndVerifyTapped(_ sender: Any) {
+        guard let image = docImageView.image else {
+            alert(message: "Capture a document before verifying")
+            return
+        }
+        
+        message.text = "Loading..."
+        do {
+            try W2DocumentVerificationClientBuilder(licenceKey: licenseKey)
+            .build()
+            .classifyAndVerify(clientReference: clientRef, autoVerify: true,
+                    document: .passport(image)) { result in
+                        switch result {
+                        case .success(let data):
+                            print("Success: \(data)")
+                            self.message.text = "Success!"
+                        case .failure(let error):
+                            self.handle(error: error)
+                        }
+            }
+        } catch {
+            handle(error: error)
+        }
+    }
+    
     @IBAction func documentVerifyUsingRestEndpoint(_ sender: Any) {
         guard let image = docImageView.image else {
             alert(message: "Capture a document before verifying")

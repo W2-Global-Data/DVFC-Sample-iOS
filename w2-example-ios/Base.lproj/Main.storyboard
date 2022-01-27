@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="R2A-Qv-Fqg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="R2A-Qv-Fqg">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -95,14 +95,24 @@
                                     <action selector="documentVerifyUsingRestEndpoint:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WdA-5Q-nMY"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igs-79-sWu">
+                                <rect key="frame" x="16" y="366" width="343" height="30"/>
+                                <state key="normal" title="Attempt Classify And Verify"/>
+                                <connections>
+                                    <action selector="documentClassifyAndVerifyTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8z3-Yb-QG9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sYT-Cj-gZp" secondAttribute="trailing" constant="16" id="59S-Mf-fJi"/>
                             <constraint firstItem="KWf-i1-txh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="8fU-t0-Gkr"/>
+                            <constraint firstItem="igs-79-sWu" firstAttribute="top" secondItem="Rrj-lG-eX6" secondAttribute="bottom" constant="4" id="CA6-53-eJS"/>
                             <constraint firstItem="3yN-Cb-FKa" firstAttribute="top" secondItem="Dbr-Wp-BNb" secondAttribute="bottom" constant="8" id="Ck0-qu-9sS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="igs-79-sWu" secondAttribute="trailing" constant="16" id="DVG-wg-iph"/>
                             <constraint firstItem="3yN-Cb-FKa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="EjX-yv-OOQ"/>
+                            <constraint firstItem="igs-79-sWu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="F5f-US-vnw"/>
                             <constraint firstItem="Dbr-Wp-BNb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="GpR-bd-7Ul"/>
                             <constraint firstItem="sYT-Cj-gZp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Hn9-zw-iDZ"/>
                             <constraint firstItem="FJW-sX-EDM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="JKE-jd-BVh"/>
@@ -125,10 +135,10 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FJW-sX-EDM" secondAttribute="trailing" constant="16" id="egm-wP-BgW"/>
                             <constraint firstItem="Rrj-lG-eX6" firstAttribute="top" secondItem="KWf-i1-txh" secondAttribute="bottom" constant="10" id="eyX-Vg-3Vb"/>
                             <constraint firstItem="sYT-Cj-gZp" firstAttribute="top" secondItem="VpA-Iy-BtD" secondAttribute="bottom" constant="8" id="kkx-cY-0Z0"/>
+                            <constraint firstItem="Dbr-Wp-BNb" firstAttribute="top" secondItem="igs-79-sWu" secondAttribute="bottom" constant="8" symbolic="YES" id="nFh-Nn-qzv"/>
                             <constraint firstItem="dtS-3r-ZZS" firstAttribute="top" secondItem="FJW-sX-EDM" secondAttribute="bottom" constant="16" id="qoN-SE-btn"/>
                             <constraint firstItem="Tlk-rO-DHR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="uBA-H3-quf"/>
                             <constraint firstItem="VFL-61-da5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="zOC-hm-il1"/>
-                            <constraint firstItem="Dbr-Wp-BNb" firstAttribute="top" secondItem="Rrj-lG-eX6" secondAttribute="bottom" constant="42" id="zf8-bx-NRS"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dTb-Yt-ieg"/>
